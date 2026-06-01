@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: Text-Guided 3D BioMedSeg FragRefine
+message: If you use this code, please cite the challenge submission or paper once available.
+type: software
+authors:
+  - family-names: Zhou
+    given-names: Jiang
+repository-code: https://github.com/zhoujiang18/text-guided-3d-biomedseg-fragrefine
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-05-30"
+

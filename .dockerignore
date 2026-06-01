@@ -1,0 +1,15 @@
+.git/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+data/
+datasets/
+outputs/
+demo_outputs/
+team_docker/
+*.tar
+*.tar.gz
+.DS_Store
+

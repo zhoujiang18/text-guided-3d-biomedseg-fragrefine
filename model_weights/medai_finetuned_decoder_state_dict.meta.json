@@ -1,0 +1,52 @@
+{
+  "runtime_checkpoint_name": "medai_finetuned_decoder_state_dict.ckpt",
+  "checkpoint_format": "state_dict-only",
+  "metadata_inside_ckpt": false,
+  "processed_like_accuracy_submission": true,
+  "source_checkpoint": "checkpoint_step000500.ckpt",
+  "source_checkpoint_had_metadata": true,
+  "source_training_metadata": {
+    "script": "scripts/finetune_cvpr_npz_slices.py",
+    "base_checkpoint": "official Microsoft BiomedParse v2 checkpoint",
+    "training_data": "official challenge training data",
+    "args": {
+      "max_steps": 1000,
+      "batch_size": 1,
+      "accum_steps": 8,
+      "num_workers": 2,
+      "lr": 1e-06,
+      "weight_decay": 0.01,
+      "image_size": 512,
+      "num_prompts": 1,
+      "foreground_prob": 0.85,
+      "trainable": "decoder",
+      "amp": "fp16",
+      "seed": 20260531,
+      "limit_volumes": 0,
+      "save_every": 50,
+      "log_every": 10
+    },
+    "records": 35802,
+    "trainable_params": 70430209,
+    "total_params": 371798778,
+    "created_time": "2026-05-31 22:36:29"
+  },
+  "selected_by_full_validation": {
+    "method": "decoder_lr1e-6_steps1000_step500_full",
+    "cases": 2144,
+    "semantic_cases": 1457,
+    "instance_cases": 686,
+    "mean_DSC": 0.8271524365133837,
+    "mean_F1_50": 0.47683527696793,
+    "mean_DSC_TP": 0.7170660349854228,
+    "delta_mean_DSC": 0.00039505833905295606,
+    "delta_mean_F1_50": 0.0010507288629737488,
+    "delta_mean_DSC_TP": -0.0009648688046647313,
+    "all_positive": false,
+    "safe_positive": true,
+    "score": -0.0014488192119674892,
+    "checkpoint": "checkpoint_step000500.ckpt"
+  },
+  "processing_note": "Converted from training checkpoint {state_dict, metadata} to final submission style: raw state_dict only. Provenance is stored in this sidecar JSON, not inside the ckpt.",
+  "created_time": "2026-06-01 17:16:30 CST"
+}

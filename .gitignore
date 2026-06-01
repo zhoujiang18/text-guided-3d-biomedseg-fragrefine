@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+src/pixel_decoder/ops/build/
+
+# Local data and outputs
+data/
+datasets/
+inputs/
+outputs/
+demo_inputs/
+demo_outputs/
+team_docker/
+*.tar
+*.tar.gz
+
+# Large model files should be distributed via release assets or external links.
+model_weights/*.ckpt
+model_weights/*.pth
+model_weights/*.pt
+model_weights/*.safetensors
+
+# Editor and system files
+.DS_Store
+.idea/
+.vscode/
