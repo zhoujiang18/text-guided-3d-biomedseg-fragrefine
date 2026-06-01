@@ -6,6 +6,8 @@ This repository packages the Docker inference code, model definition, configurat
 
 ## Method Summary
 
+![Method overview](assets/method-bg-final.png)
+
 The submission uses a text-guided 3D adaptation of a BioMedParse/SEEM-style segmentation model. For each 3D case, the challenge input provides:
 
 - `imgs`: a 3D biomedical image volume.
