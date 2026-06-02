@@ -1,6 +1,6 @@
 # Text-Guided 3D BioMedSeg FragRefine
 
-Official code release for our accuracy-track submission to the **CVPR 2025 Foundation Models for Interactive 3D Biomedical Image Segmentation Challenge**.
+Official code release for our accuracy-track submission to the **CVPR 2026 Foundation Models for Text-guided 3D Biomedical Image Segmentation**.
 
 This repository packages the Docker inference code, model definition, configuration files, transfer fine-tuning utilities, challenge-format evaluation helpers, and reproducibility notes for the text-guided 3D biomedical segmentation system used in the accuracy track.
 
