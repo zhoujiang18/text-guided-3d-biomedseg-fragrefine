@@ -6,7 +6,9 @@ This repository packages the Docker inference code, model definition, configurat
 
 ## Method Summary
 
-![Method overview](assets/method-bg-final.png)
+![Text-guided 3D biomedical segmentation workflow](assets/Text_Guided_3D_Biomedical_Image_Segmentation_EN.svg)
+
+The overview illustrates `CT_AMOS_amos_0395`, a 59-slice CT case with 15 text prompts. Liver, right kidney, and aorta are highlighted, while the full-volume prediction includes all 15 target classes. Offline decoder/head adaptation is separate from inference. The illustrated path uses adaptive slice batching, FP16 execution, cached text embeddings, and prompt-wise chunked upsampling. As this is a semantic CT case, it bypasses microscopy-specific uncertainty correction and instance-only component reassignment, proceeding through class assignment to lossless label output. [Open the full-resolution SVG](assets/Text_Guided_3D_Biomedical_Image_Segmentation_EN.svg).
 
 The submission uses a text-guided 3D adaptation of a BioMedParse/SEEM-style segmentation model. For each 3D case, the challenge input provides:
 
@@ -14,7 +16,7 @@ The submission uses a text-guided 3D adaptation of a BioMedParse/SEEM-style segm
 - `spacing`: physical voxel spacing used by the official evaluator.
 - `text_prompts`: class IDs mapped to text prompts, plus `instance_label`.
 
-The model encodes the text prompts, runs multi-view 2D slice inference over the 3D volume, applies per-slice non-maximum suppression, merges class masks into the original label IDs, and writes a challenge-compatible `.npz` file containing `segs`.
+The model encodes the text prompts, runs slice-based inference over the 3D volume, applies per-slice non-maximum suppression, merges class masks into the original label IDs, and writes a challenge-compatible `.npz` file containing `segs`.
 
 ## Repository Structure
 
